@@ -1,0 +1,7 @@
+{
+  "name": "revista-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
