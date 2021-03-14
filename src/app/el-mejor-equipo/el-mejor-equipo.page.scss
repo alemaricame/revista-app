@@ -1,0 +1,16 @@
+.contenido{
+    --background: url('../../assets/imgs/Mobile\ -\ 8.png') 0 0/100% 100% no-repeat;
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.texto-encima{
+    position: absolute;
+    top: 146px;
+    left: 64px;
+    width: 50%;
+}

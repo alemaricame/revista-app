@@ -1,0 +1,21 @@
+.contenido{
+    --background: url('../../assets/imgs/Mobile\ -\ 7.png') 0 0/100% 100% no-repeat;
+}
+
+.list{
+    margin-top: 50vw;
+    text-align: center;
+}
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.texto-encima{
+    position: absolute;
+    top: 2px;
+    left: 10px;
+}
+.profile{
+    border-radius: 50%;
+}

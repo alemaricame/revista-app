@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { ViewPlayerPage } from '../view-player/view-player.page';
 
 @Component({
   selector: 'app-contenido',
@@ -9,11 +11,20 @@ import { Router } from '@angular/router';
 export class ContenidoPage implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+    public modalController: ModalController
+
   ) { }
 
   ngOnInit() {
+    this.openModal();
   }
+  async openModal() {
+    const modal = await this.modalController.create({
+    component: ViewPlayerPage
+    });
+    return await modal.present();
+   }
   conocenos(){
     this.router.navigateByUrl('/conocenos')
   }

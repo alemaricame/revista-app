@@ -51,6 +51,22 @@ const routes: Routes = [
   {
     path: 'salud',
     loadChildren: () => import('./salud/salud.module').then( m => m.SaludPageModule)
+  },
+  {
+    path: 'cumpleanos-mes',
+    loadChildren: () => import('./cumpleanos-mes/cumpleanos-mes.module').then( m => m.CumpleanosMesPageModule)
+  },
+  {
+    path: 'el-mejor-equipo',
+    loadChildren: () => import('./el-mejor-equipo/el-mejor-equipo.module').then( m => m.ElMejorEquipoPageModule)
+  },
+  {
+    path: 'premio-a-la-excelencia',
+    loadChildren: () => import('./premio-a-la-excelencia/premio-a-la-excelencia.module').then( m => m.PremioALaExcelenciaPageModule)
+  },
+  {
+    path: 'view-player',
+    loadChildren: () => import('./view-player/view-player.module').then( m => m.ViewPlayerPageModule)
   }
 ];
 

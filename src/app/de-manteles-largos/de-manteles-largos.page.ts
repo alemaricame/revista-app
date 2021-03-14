@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-de-manteles-largos',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeMantelesLargosPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router : Router
+  ) { }
 
   ngOnInit() {
   }
+
+  cumpleanos(){
+    this.router.navigateByUrl('/cumpleanos-mes')
+  }
+  elMejorEquipo(){
+    this.router.navigateByUrl('/el-mejor-equipo')
+  }
+
+  premioALaExcelencia(){
+    this.router.navigateByUrl('/premio-a-la-excelencia')
+  }
+  
 
 }
