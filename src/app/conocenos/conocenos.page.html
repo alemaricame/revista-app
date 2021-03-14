@@ -1,0 +1,27 @@
+<ion-content class="contenido">
+  <ion-fab *ngIf="!menu" vertical="top" horizontal="start"  slot="fixed">
+    <ion-fab-button (click)="openMenu()" color="transparent">
+      <img src="../../assets/icon/Menu.png" alt="">
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab *ngIf="menu" vertical="top" horizontal="start"  slot="fixed">
+    <!-- <app-menu></app-menu> -->
+
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="start"  slot="fixed">
+    <ion-fab-button href="https://www.facebook.com/profile.php?id=100063496628055&sk=about_life_events" target="_blank" color="transparent">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button href="https://twitter.com/OxxoPlaza?s=08" target="_blank" color="transparent">
+      <ion-icon  name="logo-twitter"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button href="https://instagram.com/oxxo_plaza_queretaro?igshid=13w5rp6mqj6ud" target="_blank" color="transparent">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button href="https://vm.tiktok.com/ZMermB8Sd/" target="_blank" color="transparent">
+      <ion-icon name="logo-tiktok"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
