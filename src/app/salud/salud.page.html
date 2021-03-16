@@ -1,13 +1,43 @@
 <ion-content class="contenido">
-  <ion-fab *ngIf="!menu" vertical="top" horizontal="start"  slot="fixed">
+  <ion-fab *ngIf="!menu" vertical="top" horizontal="start" slot="fixed">
     <ion-fab-button (click)="openMenu()" color="transparent">
       <img src="../../assets/icon/Menu.png" alt="">
     </ion-fab-button>
   </ion-fab>
 
 
-  <div>
-    <img src="../../assets/img_contenido/Captura de pantalla 2021-03-16 a la(s) 00.12.35.png" alt="">
+  <div class="margin">
+    <ion-card>
+      <ion-card-content>
+        DÍA MUNDIAL DEL RIÑÓN
+      </ion-card-content>
+    </ion-card>
+    <div class="end">
+      <button (click)="info1()">Ver infografía</button>
+    </div>
+
+
+    <div *ngIf="info_1">
+      <iframe width="auto" height="500" src="../../assets/img_contenido/info1.pdf" frameborder="0"></iframe>
+    </div>
+
+
+    <div class="margin">
+      <ion-card>
+        <ion-card-content>
+          DÍA MUNDIAL DEL SUEÑO
+        </ion-card-content>
+      </ion-card>
+      <div class="end">
+        <button (click)="info2()">Ver infografía</button>
+      </div>
+
+    </div>
+
+    <div *ngIf="info_2">
+      <iframe width="auto" height="500" src="../../assets/img_contenido/info2.pdf" frameborder="0"></iframe>
+    </div>
+
   </div>
 
 </ion-content>

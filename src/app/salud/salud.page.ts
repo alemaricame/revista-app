@@ -8,6 +8,8 @@ import { MenuPage } from '../menu/menu.page';
   styleUrls: ['./salud.page.scss'],
 })
 export class SaludPage implements OnInit {
+  info_1: Boolean = false;
+  info_2: Boolean = false;
 
   constructor(
     public modalController: ModalController,
@@ -24,4 +26,12 @@ export class SaludPage implements OnInit {
     return await modal.present();
   }
 
+  info1(){
+    this.info_1 = !this.info_1;
+
+  }
+
+  info2(){
+    this.info_2 = !this.info_2;
+  }
 }
