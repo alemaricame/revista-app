@@ -67,6 +67,38 @@ const routes: Routes = [
   {
     path: 'view-player',
     loadChildren: () => import('./view-player/view-player.module').then( m => m.ViewPlayerPageModule)
+  },
+  {
+    path: 'generacion',
+    loadChildren: () => import('./generacion/generacion.module').then( m => m.GeneracionPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'salud-mes',
+    loadChildren: () => import('./salud-mes/salud-mes.module').then( m => m.SaludMesPageModule)
+  },
+  {
+    path: 'convenios',
+    loadChildren: () => import('./convenios/convenios.module').then( m => m.ConveniosPageModule)
+  },
+  {
+    path: 'los-de-cajon',
+    loadChildren: () => import('./los-de-cajon/los-de-cajon.module').then( m => m.LosDeCajonPageModule)
+  },
+  {
+    path: 'aqui-estamos',
+    loadChildren: () => import('./aqui-estamos/aqui-estamos.module').then( m => m.AquiEstamosPageModule)
+  },
+  {
+    path: 'linea-covid',
+    loadChildren: () => import('./linea-covid/linea-covid.module').then( m => m.LineaCovidPageModule)
+  },
+  {
+    path: 'informacion-que-cura',
+    loadChildren: () => import('./informacion-que-cura/informacion-que-cura.module').then( m => m.InformacionQueCuraPageModule)
   }
 ];
 

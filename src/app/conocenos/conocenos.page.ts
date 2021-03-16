@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { MenuPage } from '../menu/menu.page';
+import { ViewPlayerPage } from '../view-player/view-player.page';
 
 @Component({
   selector: 'app-conocenos',
@@ -7,13 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConocenosPage implements OnInit {
   menu = false;
-  constructor() { }
+  constructor(
+    public modalController: ModalController,
+  ) { }
 
   ngOnInit() {
   }
 
-  openMenu(){
-    this.menu = !this.menu;
-  }
+  async openMenu() {
+    const modal = await this.modalController.create({
+    component: MenuPage
+    });
+    return await modal.present();
+   }
 
 }

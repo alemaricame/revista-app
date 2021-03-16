@@ -7,9 +7,18 @@
       2. De manteles largos
     </button>
 
-    <button (click)="historia()" class="historia">
+    <button (click)="open3()" class="historia">
       3. Tu historia, nuestra historia
     </button>
+
+    <div *ngIf="historiaOpen">
+      <button (click)="generacion()" class="historia">
+        #GeneraciónProdeli
+      </button>
+      <button (click)="historia()" class="historia">
+        #HistoriaDeÉxito
+      </button>
+    </div>
     <button (click)="muro()" class="muro">
       4. Muro del desarrollo
     </button>
@@ -25,6 +34,30 @@
     <button (click)="salud()" class="salud">
       7. Salud
     </button>
+
+    <div *ngIf="saludOpen">
+      <button (click)="informacion()" class="para_ti">
+        Información que cura
+      </button>
+      <button (click)="saludMes()" class="para_ti">
+        ¿Qué onda con la salud en marzo?
+      </button>
+      <button (click)="para()" class="para_ti">
+        Para que te animes
+      </button>
+      <button (click)="convenios()" class="para_ti">
+        Ahórrale con los convenios
+      </button>
+      <button (click)="cajon()" class="para_ti">
+        Lo$ de cajón
+      </button>
+      <button (click)="aquiEstamos()" class="para_ti">
+        Si nos necesitas aquí estamos
+      </button>
+      <button (click)="covid()" class="para_ti">
+        Línea COVID
+      </button>
+    </div>
   </div>
 
   <div>

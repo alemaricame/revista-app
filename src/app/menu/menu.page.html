@@ -1,0 +1,76 @@
+<ion-content class="contenido">
+  <ion-list>
+    <div (click)="close()">
+      <img src="../../assets/icon/close.png"> <label for="">Cerrar</label>
+    </div>
+    <div class="margin" (click)="conocenos()">
+      <img src="../../assets/icon/Knowing.png"> <label for="">Conócenos</label>
+    </div>
+
+    <div class="margin" (click)="manteles()">
+      <img src="../../assets/icon/Party.png"> <label for="">De manteles largos</label>
+    </div>
+
+    <div class="margin" (click)="open3()">
+      <img src="../../assets/icon/History.png"> <label for="">Tu historia, nuestra historia</label>
+    </div>
+    <div *ngIf="historiaOpen" class="margin margin-seconds" (click)="generacion()">
+      <img src="../../assets/icon/History.png"> <label for="">#GeneraciónProdeli</label>
+    </div>
+    <div *ngIf="historiaOpen" class="margin margin-seconds" (click)="historia()">
+      <img src="../../assets/icon/History.png"> <label for="">#HistoriaDeÉxito</label>
+    </div>
+
+    <div class="margin" (click)="muro()">
+      <img src="../../assets/icon/wall.png"> <label for="">Muro del desarrollo</label>
+    </div>
+
+    <div class="margin" (click)="eventos()">
+      <img src="../../assets/icon/Events.png"> <label for="">Eventos</label>
+    </div>
+
+    <div class="margin" (click)="paraTi()">
+      <img src="../../assets/icon/Present.png"> <label for="">Lo que tenemos para ti</label>
+    </div>
+
+    <div class="margin" (click)="salud()">
+      <img src="../../assets/icon/estetoscopio.png"> <label for="">Salud</label>
+    </div>
+
+    <div *ngIf="saludOpen" class="margin-seconds" (click)="informacion()">
+      <img src="../../assets/icon/estetoscopio.png"> <label for="">Información que cura</label>
+    </div>
+
+    <div *ngIf="saludOpen" class="margin-seconds" (click)="saludMes()">
+      <img src="../../assets/icon/estetoscopio.png"> <label for=""> ¿Qué onda con la salud en marzo?
+      </label>
+    </div>
+
+    <div *ngIf="saludOpen" class="margin-seconds" (click)="para()">
+      <img src="../../assets/icon/estetoscopio.png"> <label for=""> Para que te animes
+      </label>
+    </div>
+
+    <div *ngIf="saludOpen" class="margin-seconds" (click)="convenios()">
+      <img src="../../assets/icon/estetoscopio.png"> <label for=""> Ahórrale con los convenios
+      </label>
+    </div>
+
+    <div *ngIf="saludOpen" class="margin-seconds" (click)="cajon()">
+      <img src="../../assets/icon/estetoscopio.png"> <label for=""> Lo$ de cajón
+      </label>
+    </div>
+
+    <div *ngIf="saludOpen" class="margin-seconds" (click)="aquiEstamos()">
+      <img src="../../assets/icon/estetoscopio.png"> <label for=""> Si nos necesitas aquí estamos
+      </label>
+    </div>
+
+    <div *ngIf="saludOpen" class="margin-seconds" (click)="covid()">
+      <img src="../../assets/icon/estetoscopio.png"> <label for=""> Línea COVID
+      </label>
+    </div>
+  </ion-list>
+
+
+</ion-content>

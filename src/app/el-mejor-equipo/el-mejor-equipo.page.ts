@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { MenuPage } from '../menu/menu.page';
 
 @Component({
   selector: 'app-el-mejor-equipo',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElMejorEquipoPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public modalController: ModalController,
+
+  ) { }
 
   ngOnInit() {
   }
+  async openMenu() {
+    const modal = await this.modalController.create({
+    component: MenuPage
+    });
+    return await modal.present();
+  }
+
 
 }

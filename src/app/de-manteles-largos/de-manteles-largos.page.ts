@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { MenuPage } from '../menu/menu.page';
 
 @Component({
   selector: 'app-de-manteles-largos',
@@ -9,7 +11,9 @@ import { Router } from '@angular/router';
 export class DeMantelesLargosPage implements OnInit {
 
   constructor(
-    private router : Router
+    private router : Router,
+    public modalController: ModalController,
+
   ) { }
 
   ngOnInit() {
@@ -26,5 +30,11 @@ export class DeMantelesLargosPage implements OnInit {
     this.router.navigateByUrl('/premio-a-la-excelencia')
   }
   
+  async openMenu() {
+    const modal = await this.modalController.create({
+    component: MenuPage
+    });
+    return await modal.present();
+  }
 
 }

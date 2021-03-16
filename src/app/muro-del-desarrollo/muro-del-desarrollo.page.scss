@@ -1,3 +1,55 @@
 .contenido{
     --background: url('../../assets/imgs/Mobile\ -\ 12.png') 0 0/100% 100% no-repeat;
 }
+ion-list{
+    background: transparent;
+    margin-top: 35vw;
+}
+
+ion-card{
+    width: 75%;
+    border: 2px solid #000000;
+    margin:10px auto;
+    width: 80vw;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
+
+.img{
+    width: 70%;
+    border: 2px solid #000000;
+    margin:10px auto;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    background-color: white;
+}
+
+
+.title{
+    width: 75%;
+    border: 2px solid #000000;
+    margin:10px auto;
+    width: 80vw;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    background-color: rgb(204, 32, 44);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    padding: 5px;
+}
+
+ion-fab-button{
+    background-color: transparent;
+}
+
+ion-fab-button{
+    --box-shadow: none !important
+}
+
+.margin{
+    margin-top: 45vw;
+}
+
+p{
+    font-size: 12px;
+}

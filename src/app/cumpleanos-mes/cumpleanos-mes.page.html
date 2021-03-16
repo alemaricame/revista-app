@@ -1,5 +1,10 @@
 <ion-content class="contenido">
-
+  <ion-fab *ngIf="!menu" vertical="top" horizontal="start"  slot="fixed">
+    <ion-fab-button (click)="openMenu()" color="transparent">
+      <img src="../../assets/icon/Menu.png" alt="">
+    </ion-fab-button>
+  </ion-fab>
+  
   <div class="list">
     <div class="contenedor" *ngFor="let user of users">
       <img src="../../assets/components/dialogo.png" alt="">
