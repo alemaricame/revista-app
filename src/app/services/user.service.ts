@@ -23,4 +23,20 @@ export class UserService {
   example(){
     return this.http.get(environment.apiURL+'example');
   }
+
+
+  /**
+   * El mejor equipo
+   */
+  getElMejorEquipo(){
+    return this.http.get(environment.apiURL+'el-mejor-equipo-todos');
+  }
+  getProdeli(){
+    return this.http.get(environment.apiURL+'prodeli-todos');
+  }
+
+
+  getExcelencia(){
+    return this.http.get(environment.apiURL+'excelencia-todos');
+  }
 }

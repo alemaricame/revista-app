@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { MenuPage } from '../menu/menu.page';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-generacion',
@@ -22,9 +23,14 @@ export class GeneracionPage implements OnInit {
       img: ''
     }
   ]
+
+  prodeliTodos: any = []
   constructor(
     public modalController: ModalController,
-  ) { }
+    private usersService: UserService
+  ) { 
+    this.getProdeli()
+  }
 
   ngOnInit() {
   }
@@ -34,6 +40,13 @@ export class GeneracionPage implements OnInit {
       component: MenuPage
     });
     return await modal.present();
+  }
+
+  getProdeli(){
+    this.usersService.getProdeli().subscribe(data=>{
+      console.log('prodeli', data)
+      this.prodeliTodos = data['data']
+    })
   }
 
 }

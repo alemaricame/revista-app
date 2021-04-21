@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { MenuPage } from '../menu/menu.page';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-el-mejor-equipo',
@@ -9,10 +10,17 @@ import { MenuPage } from '../menu/menu.page';
 })
 export class ElMejorEquipoPage implements OnInit {
 
+  elMejorEquipoData;
+  text;
+  base64Data;
+  converted_image;
   constructor(
     public modalController: ModalController,
-
-  ) { }
+    private users: UserService
+ 
+  ) { 
+    this.getMejorEquipo();
+  }
 
   ngOnInit() {
   }
@@ -23,5 +31,27 @@ export class ElMejorEquipoPage implements OnInit {
     return await modal.present();
   }
 
+  getMejorEquipo(){
+    this.users.getElMejorEquipo().subscribe(data=>{
+      this.elMejorEquipoData = data['data'];
+      console.log('data', this.elMejorEquipoData);
+      this.text = this.elMejorEquipoData.text;
+      this.base64Data= this.elMejorEquipoData.image.data;
+      //this.converted_image= "data:image/jpg;base64,"+this.base64Data;    
+      console.log(this.converted_image)
+
+
+      var imageData = btoa(this.elMejorEquipoData.image.data);
+
+      console.log(imageData)
+
+      let logo = "data:image/png;base64,"+imageData
+      logo =  logo.replace(new RegExp(' ', 'g'), '+');
+      this.converted_image = logo;
+      console.log("-------------------")
+
+      console.log(logo)
+    })
+  }
 
 }

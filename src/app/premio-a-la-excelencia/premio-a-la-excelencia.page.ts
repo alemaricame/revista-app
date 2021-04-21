@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { MenuPage } from '../menu/menu.page';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-premio-a-la-excelencia',
@@ -9,9 +10,13 @@ import { MenuPage } from '../menu/menu.page';
 })
 export class PremioALaExcelenciaPage implements OnInit {
 
+  excelencia: any = [];
   constructor(
     public modalController: ModalController,
-  ) { }
+    private userServices: UserService
+  ) { 
+    this.getExcelencia();
+  }
 
   ngOnInit() {
   }
@@ -23,5 +28,11 @@ export class PremioALaExcelenciaPage implements OnInit {
     return await modal.present();
   }
 
+  getExcelencia(){
+    this.userServices.getExcelencia().subscribe(data=>{
+      console.log('excelencia', data['data'])
+      this.excelencia = data['data']
+    })
+  }
 
 }
