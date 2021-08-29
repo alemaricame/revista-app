@@ -1,3 +1,20 @@
 <ion-content class="contenido">
+    <ion-fab *ngIf="!menu" vertical="top" horizontal="start"  slot="fixed">
+        <ion-fab-button (click)="openMenu()" color="transparent">
+          <img src="../../assets/icon/Menu.png" alt="">
+        </ion-fab-button>
+      </ion-fab>
+    
+    <div class="cumpleanos" (click)="cumpleanos()">
+        <img src="../../assets/components/cumpleanos_mes.png" alt="">
+    </div>
+
+    <div  class="equipo"(click)="elMejorEquipo()">
+        <img src="../../assets/components/mejor_equipo.png" alt="">
+    </div>
+    <div class="premio" (click)="premioALaExcelencia()">
+        <img src="../../assets/components/premio_excelencia.png" alt="">
+    </div>
+
 
 </ion-content>

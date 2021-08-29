@@ -1,0 +1,41 @@
+.contenido{
+    --background: url('../../assets/imgs/Path\ 24330.png') 0 0/100% 100% no-repeat;
+}
+ion-list{
+    background-color: transparent;
+    margin-top: 10vw;
+    margin-left: 15px;
+}
+
+
+ion-avatar{
+    background-color: transparent;
+}
+
+.item-native{
+    background: transparent !important;
+}
+
+label{
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+
+}
+
+div{
+    border-left: 10vw;
+
+}
+
+.margin{
+    margin-top: 5vw;
+}
+
+.margin-seconds{
+    margin-left: 5vw;
+    margin-top: 5vw;
+    font-size: 12px;
+}

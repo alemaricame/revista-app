@@ -1,0 +1,33 @@
+.contenido{
+    --background: url('../../assets/imgs/Mobile\ -\ 9.png') 0 0/100% 100% no-repeat;
+}
+ion-list{
+    background: transparent;
+    margin-top: 35vw;
+}
+
+ion-card{
+    width: 75%;
+    border: 2px solid #000000;
+    margin:10px auto;
+    width: 80vw;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.img{
+    width: 70%;
+    border: 2px solid #000000;
+    margin:10px auto;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    background-color: white;
+}
+
+ion-fab-button{
+    background-color: transparent;
+}
+
+ion-fab-button{
+    --box-shadow: none !important
+}

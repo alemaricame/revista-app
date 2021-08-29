@@ -1,0 +1,46 @@
+.contenido{
+    --background: url('../../assets/imgs/informaci¢n_cura.png') 0 0/100% 100% no-repeat;
+}
+
+
+ion-fab-button{
+    background-color: transparent;
+}
+
+ion-fab-button{
+    --box-shadow: none !important
+}
+
+.margin{
+    margin-top: 45vw;
+}
+
+ion-card{
+    width: 75%;
+    border: 2px solid #000000;
+    margin:10px auto;
+    width: 80vw;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+ion-card-content{
+    border: 2px solid #000000;
+    background-color: rgb(204,32,44);
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: bolder;
+}   
+button{
+    text-align: end;
+    border: 2px solid #000000;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.end{
+    text-align: end;
+}

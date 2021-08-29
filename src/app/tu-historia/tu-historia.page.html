@@ -1,3 +1,14 @@
 <ion-content class="contenido">
- 
+  <ion-fab *ngIf="!menu" vertical="top" horizontal="start"  slot="fixed">
+    <ion-fab-button (click)="openMenu()" color="transparent">
+      <img src="../../assets/icon/Menu.png" alt="">
+    </ion-fab-button>
+  </ion-fab>
+        <ion-list>
+          <ion-card>
+            <ion-card-content>
+              <iframe width="250" height="250" src="https://androidrest13.000webhostapp.com/oxxo.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
 </ion-content>

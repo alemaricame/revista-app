@@ -1,0 +1,24 @@
+.contenido{
+    --background: url('../../assets/imgs/los_cajon.png') 0 0/100% 100% no-repeat;
+}
+
+ion-list{
+    background-color: transparent;
+}
+
+ion-fab-button{
+    background-color: transparent;
+}
+
+ion-fab-button{
+    --box-shadow: none !important
+}
+
+.margin{
+    margin-top: 45vw;
+}
+
+.margin-image{
+    margin-top: 5vw;
+    text-align: center;
+}

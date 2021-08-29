@@ -1,0 +1,21 @@
+<ion-content class="contenido">
+  <ion-fab *ngIf="!menu" vertical="top" horizontal="start"  slot="fixed">
+    <ion-fab-button (click)="openMenu()" color="transparent">
+      <img src="../../assets/icon/Menu.png" alt="">
+    </ion-fab-button>
+  </ion-fab>
+
+        <ion-list>
+            <ion-card >
+                <ion-card-content>
+                  <h1>{{excelencia.nombre}}</h1>
+                  <p> {{excelencia.text}} </p>
+                </ion-card-content>
+              </ion-card>
+
+
+              <ion-card class="img">
+                  <img src="../../assets/img_contenido/bruce-mars-AndE50aaHn4-unsplash (1).jpg" alt="">
+              </ion-card>
+        </ion-list>
+</ion-content>
