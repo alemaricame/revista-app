@@ -1,0 +1,36 @@
+.contenido{
+    --background: url('../../assets/imgs/3.png') 0 0/100% 100% no-repeat;
+}
+
+.m-t{
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.font{
+    font-size: 24px;
+    margin-left: 50%;
+}
+
+img{
+    width: 80%;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+}
+
+ion-input{
+    border: 2px solid #000000;
+    margin: 5% auto;
+    width: 70%;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    background-color: white;
+}
+
+.mt-submit{
+    margin-top: 10%;
+    font-size: 14px;
+}

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conocenos.page.scss'],
 })
 export class ConocenosPage implements OnInit {
-
+  menu = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  openMenu(){
+    this.menu = !this.menu;
   }
 
 }

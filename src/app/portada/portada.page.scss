@@ -1,0 +1,18 @@
+.contenido{
+    --background: url('../../assets/imgs/1.png') 0 0/100% 100% no-repeat;
+}
+ion-grid{
+    height: 80%;
+}
+#cool-button-div {
+
+    //position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}

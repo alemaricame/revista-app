@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mi perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="contenido">
+  <ion-item-divider>
+    <ion-label>Foto de perfil</ion-label>
+  </ion-item-divider>
+  <div class="ion-text-center avatar">
+    <ion-avatar >
+        <img  *ngIf="!photo" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        <img  *ngIf="photo" [src]="photo" alt="">
+        <img  *ngIf="dataUser.photo" [src]="dataUser.photo" alt="">
+    </ion-avatar>
+  </div>
+
+  <div class="ion-text-center">
+    <label class="mt-submit ion-text-center" (click)="take()">Tomar foto</label>
+  </div>
+  
+
+  <div class="ion-text-center">
+    <h4>Datos personales</h4>
+  </div>
+
+  <form (ngSubmit)="logForm()">
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Nombre</ion-label>
+    </ion-item-divider>
+  
+    <ion-item>
+      <ion-input [value]="dataUser.nombre" name="nombre" disabled></ion-input>
+    </ion-item>
+   
+  </ion-item-group>
+  
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Posición:</ion-label>
+    </ion-item-divider>
+  
+    <ion-item>
+      <ion-input [value]="dataUser.posicion" name="posicion" disabled></ion-input>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Unidad:</ion-label>
+    </ion-item-divider>
+  
+    <ion-item>
+      <ion-input [value]="dataUser.unidad" name="unidad" disabled></ion-input>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>División:</ion-label>
+    </ion-item-divider>
+  
+    <ion-item>
+      <ion-input [value]="dataUser.division" name="division" disabled></ion-input>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Fecha de nacimiento:</ion-label>
+    </ion-item-divider>
+  
+    <ion-item>
+      <ion-input [value]="dataUser.date" name="date"></ion-input>
+    </ion-item>
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Número de telefóno:</ion-label>
+    </ion-item-divider>
+  
+    <ion-item>
+      <ion-input [value]="dataUser.phone" name="phone"></ion-input>
+    </ion-item>
+  </ion-item-group>
+
+  <div class="ion-text-center">
+    <button class="button">Editar</button>
+  </div>
+</form>
+</ion-content>
