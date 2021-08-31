@@ -6,11 +6,10 @@
   </ion-fab>
 
   <div class="margin">
-    <div class="top-images">
-      <img src="../../assets/img_contenido/Captura de pantalla 2021-03-16 a la(s) 00.49.30.png" alt="">
-    </div>
-    <div class="top-images">
-      <img src="../../assets/img_contenido/Captura de pantalla 2021-03-16 a la(s) 00.49.36.png" alt="">
+    <div *ngFor="let convenio of convenios">
+      <div class="top-images" >
+        <img src="{{convenio.data}}" alt="">
+      </div>
     </div>
   </div>
 </ion-content>

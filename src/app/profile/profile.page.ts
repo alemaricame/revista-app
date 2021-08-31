@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { CameraResultType, CameraSource, Plugins } from '@capacitor/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { UserService } from '../services/user.service';
+import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -15,6 +18,9 @@ export class ProfilePage implements OnInit {
   constructor(
     private storage: Storage,
     private sanitizer: DomSanitizer,
+    private profile: UserService,
+    public toastController: ToastController,
+    public router: Router
 
   ) {
     this.storage.get('data').then((data)=>{
@@ -36,6 +42,29 @@ export class ProfilePage implements OnInit {
       source: CameraSource.Camera
     });
     this.photo = this.sanitizer.bypassSecurityTrustResourceUrl(image && (image.dataUrl))
+  }
+
+  edit(){
+    console.log(this.dataUser);
+    this.profile.editUser(this.dataUser)
+    .subscribe(resp=> {
+      this.presentToast('Editado correctamente')
+      this.dataUser.data = resp;
+    }, err => {
+      this.presentToast('Intentelo mas tarde')
+    })
+  }
+
+  async presentToast(send) {
+    const toast = await this.toastController.create({
+      message: send,
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  back(){
+    this.router.navigateByUrl('/contenido')
   }
 
 }

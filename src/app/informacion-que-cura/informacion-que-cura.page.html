@@ -6,10 +6,21 @@
   </ion-fab>
 
 
-  <div class="margin">
-    <img src="../../assets/img_contenido/Captura de pantalla 2021-03-16 a la(s) 00.12.35.png" alt="">
+  <div class="margin-top">
+    <div *ngFor="let item of data">
+      <div class="margin">
+        <div class="type">
+          {{item.title}}
+        </div>
+        
+      </div>
+    
+      <div class="ion-text-center">
+        <video width="300" height="200" controls>
+          <source src="{{item.data}}" type="video/mp4">
+        </video>
+      </div>
+  
+    </div>
   </div>
-
-  <div>
-    <iframe width="auto" height="315" src="https://www.youtube.com/embed/rF28_B6qbdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
 </ion-content>

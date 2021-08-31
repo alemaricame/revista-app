@@ -93,5 +93,10 @@ export class MenuPage implements OnInit {
     this.viewCtrl.dismiss();
   }
 
+  profile(){
+    this.router.navigateByUrl('/profile');
+    this.viewCtrl.dismiss();
+  }
+
 
 }

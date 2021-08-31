@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { MenuPage } from '../menu/menu.page';
+import { UserService } from '../services/user.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-cumpleanos-mes',
@@ -9,21 +11,34 @@ import { MenuPage } from '../menu/menu.page';
 })
 export class CumpleanosMesPage implements OnInit {
 
-  users = [
-    {
-      name: "Patricia Rivera",
-      fecha: "14 de marzo"
-    },
-    {
-      name: "Jorge Alvarado",
-      fecha: "14 de marzo"
-    },
-  ]
+  users: any = [];
+  month;
   constructor(
     public modalController: ModalController,
-  ) { }
+    public usersService: UserService
+  ) { 
+    this.getUsers();
+  }
 
   ngOnInit() {
+   let ex = moment('11.11.1995').format("DD/MM/YYYY");
+   
+   this.month = new Date();
+   console.log(this.month.getMonth()+1)
+
+   //var month = ex.format('M');
+  }
+
+  public getUsers(){
+    this.usersService.getAllUsers().subscribe(response => {
+      console.log(response)
+      response['data'].forEach(element => {
+        element.date =  moment(element.date).format("DD/MM/YYYY");
+        if(moment(element.date).month()+1 === (this.month.getMonth()+1)){
+          this.users.push(element);
+        }
+      });
+    })
   }
 
   async openMenu() {

@@ -9,7 +9,20 @@ ion-fab-button{
 ion-fab-button{
     --box-shadow: none !important
 }
-
-.margin{
+.margin-top{
     margin-top: 45vw;
+}
+.margin{
+    margin-top: 15vw;
+}
+
+.type{
+    width: 75%;
+    border: 2px solid #000000;
+    margin:10px auto;
+    width: 80vw;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    background-color: rgb(204, 32, 44);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }

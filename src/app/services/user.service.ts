@@ -24,6 +24,9 @@ export class UserService {
     return this.http.get(environment.apiURL+'example');
   }
 
+  getAllUsers(){
+    return this.http.get(environment.apiURL+'users');
+  }
 
   /**
    * El mejor equipo
@@ -38,5 +41,26 @@ export class UserService {
 
   getExcelencia(){
     return this.http.get(environment.apiURL+'excelencia-todos');
+  }
+  /**
+   * 
+   */
+   editUser(data){
+    return this.http.post(environment.apiURL+'edit-users', data);
+  }
+
+  /**
+   * Información que cura
+   */
+  informacionquecura(){
+    return this.http.get(environment.apiURL+'/salud/informacion-que-cura');
+  }
+
+  parqueteanimes(){
+    return this.http.get(environment.apiURL+'/salud/para-que-te-animes');
+  }
+
+  convenios(){
+    return this.http.get(environment.apiURL+'/salud/convenios');
   }
 }

@@ -6,20 +6,11 @@
   </ion-fab>
 
   <div class="margin">
-    <div class="top-menu">
-      <iframe width="auto" height="315" src="https://www.youtube.com/embed/WNz9C_vyIB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <div class="top-menu">
-      <iframe width="auto" height="315" src="https://www.youtube.com/embed/CkAOFDuxB38" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <div class="top-menu">
-      <iframe width="auto" height="315" src="https://www.youtube.com/embed/287hGEhQ2rw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <div class="top-menu">
-      <iframe width="auto" height="315" src="https://www.youtube.com/embed/Su-A6qm6HXU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    <div class="top-menu" *ngFor="let item of videos">
+      <div class="ion-text-center">
+        <video width="300" height="200" controls>
+          <source src="{{item.data}}" type="video/mp4">
+        </video>
+      </div>    </div>
   </div>
 </ion-content>

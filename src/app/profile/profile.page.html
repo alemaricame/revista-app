@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content class="contenido">
+  <a (click)="back()">Regresar</a>
   <ion-item-divider>
     <ion-label>Foto de perfil</ion-label>
   </ion-item-divider>
@@ -25,14 +26,13 @@
     <h4>Datos personales</h4>
   </div>
 
-  <form (ngSubmit)="logForm()">
   <ion-item-group>
     <ion-item-divider>
       <ion-label>Nombre</ion-label>
     </ion-item-divider>
   
     <ion-item>
-      <ion-input [value]="dataUser.nombre" name="nombre" disabled></ion-input>
+      <ion-input [value]="dataUser.nombre" disabled></ion-input>
     </ion-item>
    
   </ion-item-group>
@@ -43,7 +43,7 @@
     </ion-item-divider>
   
     <ion-item>
-      <ion-input [value]="dataUser.posicion" name="posicion" disabled></ion-input>
+      <ion-input [value]="dataUser.posicion" disabled></ion-input>
     </ion-item>
   </ion-item-group>
 
@@ -53,7 +53,7 @@
     </ion-item-divider>
   
     <ion-item>
-      <ion-input [value]="dataUser.unidad" name="unidad" disabled></ion-input>
+      <ion-input [value]="dataUser.unidad" disabled></ion-input>
     </ion-item>
   </ion-item-group>
 
@@ -63,7 +63,7 @@
     </ion-item-divider>
   
     <ion-item>
-      <ion-input [value]="dataUser.division" name="division" disabled></ion-input>
+      <ion-input [value]="dataUser.division" disabled></ion-input>
     </ion-item>
   </ion-item-group>
 
@@ -73,7 +73,7 @@
     </ion-item-divider>
   
     <ion-item>
-      <ion-input [value]="dataUser.date" name="date"></ion-input>
+      <ion-input [value]="dataUser.date"></ion-input>
     </ion-item>
   </ion-item-group>
   <ion-item-group>
@@ -82,12 +82,11 @@
     </ion-item-divider>
   
     <ion-item>
-      <ion-input [value]="dataUser.phone" name="phone"></ion-input>
+      <ion-input [value]="dataUser.phone"></ion-input>
     </ion-item>
   </ion-item-group>
 
   <div class="ion-text-center">
-    <button class="button">Editar</button>
+    <button class="button" (click)="edit()">Editar</button>
   </div>
-</form>
 </ion-content>

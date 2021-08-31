@@ -13,12 +13,13 @@
 
         <ion-grid>
           <ion-row>
-            <ion-col size="3">
-              <img  class="profile" src="http://lorempixel.com/50/50/" alt="">
+            <ion-col size="2">
+              <img  class="profile" src="{{user.photo}}" alt="">
             </ion-col>
-            <ion-col size="6">
+            <ion-col size="8">
               <div>
-                {{user.name}} - {{user.fecha}}
+                <label for="">{{user.nombre}}</label>
+                <label for=""> {{user.date}}</label>
               </div>
             </ion-col>
           </ion-row>
