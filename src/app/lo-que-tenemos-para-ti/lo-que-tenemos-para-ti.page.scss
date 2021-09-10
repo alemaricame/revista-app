@@ -32,14 +32,19 @@ ion-card{
 
 ion-card-content{
     border: 2px solid #000000;
-    background-color: rgb(204,32,44);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 12px;
     font-weight: bolder;
-}   
+}
+
+.card-header {
+    margin-bottom: 25px;
+}
 
 ion-list{
     background-color: transparent;
+    margin-top: 15vh;
 }
 
 ion-fab-button{

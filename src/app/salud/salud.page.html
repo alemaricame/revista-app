@@ -13,10 +13,16 @@
       </ion-card-content>
     </ion-card>
 
-
-    <div class="ion-text-center">
-      <iframe width="300" height="500" src="https://storage.googleapis.com/poc-sitio-web.appspot.com/OXXO/Semana%20mundial%20de%20la%20lactancia%20materna.jpeg" frameborder="0"></iframe>
-    </div>
+    <!-- <div class="ion-text-center">
+      <iframe width="auto" height="500" src="https://storage.googleapis.com/poc-sitio-web.appspot.com/OXXO/Semana%20mundial%20de%20la%20lactancia%20materna.jpeg" frameborder="0"></iframe>
+    </div> -->
+    <ion-slides [options]="sliderOpts">
+      <ion-slide>
+        <div class="swiper-zoom-container">
+          <img src="https://storage.googleapis.com/poc-sitio-web.appspot.com/OXXO/Semana%20mundial%20de%20la%20lactancia%20materna.jpeg" alt="">
+        </div>
+      </ion-slide>
+    </ion-slides>
 
   </div>
 
