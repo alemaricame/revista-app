@@ -73,7 +73,7 @@
     </ion-item-divider>
   
     <ion-item>
-      <ion-input [value]="dataUser.date"></ion-input>
+      <ion-input [value]="dataUser.date"  disabled></ion-input>
     </ion-item>
   </ion-item-group>
   <ion-item-group>
@@ -82,9 +82,35 @@
     </ion-item-divider>
   
     <ion-item>
-      <ion-input [value]="dataUser.phone"></ion-input>
+      <ion-input [value]="dataUser.phone" disabled></ion-input>
     </ion-item>
   </ion-item-group>
+
+  <div class="ion-text-center">
+    <h4>Cambia tu contraseña</h4>
+  </div>
+
+  
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Contraseña anterior:</ion-label>
+    </ion-item-divider>
+  
+    <ion-item>
+      <ion-input ></ion-input>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Nueva contraseña:</ion-label>
+    </ion-item-divider>
+  
+    <ion-item>
+      <ion-input ></ion-input>
+    </ion-item>
+  </ion-item-group>
+
 
   <div class="ion-text-center">
     <button class="button" (click)="edit()">Editar</button>

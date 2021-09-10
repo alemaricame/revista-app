@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            storeFile file('C:\\Users\\alemaricame\\keystores\\upload-keystores.jks')
+            storePassword 'oxxo123'
+            keyAlias 'oxxo123'
+            keyPassword 'oxxo123'
+        }
+    }
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "io.ionic.starter"

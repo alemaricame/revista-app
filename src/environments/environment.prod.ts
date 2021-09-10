@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiURL: 'https://poc-server-heroku.herokuapp.com/api/'
+  apiURL: 'https://alemaricame.com/api/'
 
 };

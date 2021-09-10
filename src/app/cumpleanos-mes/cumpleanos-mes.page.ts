@@ -33,7 +33,7 @@ export class CumpleanosMesPage implements OnInit {
     this.usersService.getAllUsers().subscribe(response => {
       console.log(response)
       response['data'].forEach(element => {
-        element.date =  moment(element.date).format("DD/MM/YYYY");
+        element.date =  moment(element.date).format("MM/DD/YYYY");
         if(moment(element.date).month()+1 === (this.month.getMonth()+1)){
           this.users.push(element);
         }
