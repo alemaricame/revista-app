@@ -9,6 +9,12 @@ import { MenuPage } from '../menu/menu.page';
 })
 export class LineaCovidPage implements OnInit {
 
+  sliderOpts = {
+    zoom: {
+      maxRatio: 2
+    }
+  }
+
   constructor(
     public modalController: ModalController,
 

@@ -11,6 +11,12 @@ export class SaludPage implements OnInit {
   info_1: Boolean = false;
   info_2: Boolean = false;
 
+  sliderOpts = {
+    zoom: {
+      maxRatio:2
+    }
+  }
+
   constructor(
     public modalController: ModalController,
 
