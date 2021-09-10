@@ -1,11 +1,74 @@
 <ion-content class="contenido">
-  <ion-fab *ngIf="!menu" vertical="top" horizontal="start"  slot="fixed">
+  <ion-fab *ngIf="!menu" vertical="top" horizontal="start" slot="fixed">
     <ion-fab-button (click)="openMenu()" color="transparent">
-      <img src="../../assets/icon/Menu.png" alt="">
+      <img src="../../assets/icon/Menu.png" alt="" />
     </ion-fab-button>
   </ion-fab>
-  
-  <div class="contenedor">
+
+  <ion-slides [options]="sliderOpts" class="preview-slides" >
+    <ion-slide>
+      <div>
+        <img
+          src="https://storage.googleapis.com/poc-sitio-web.appspot.com/OXXO/WhatsApp%20Image%202021-09-08%20at%2012.31.38%20AM.jpeg"
+          tappable
+          (click)="openPreview(img)"
+        />
+
+        <ion-card class="margin">
+          <ion-card-content> 
+            <div>
+              <strong>
+                Ganador al mejor equipo
+              </strong> 
+              <br>
+              ¿Cómo vives los valores femsa?
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <img
+          src="https://storage.googleapis.com/poc-sitio-web.appspot.com/OXXO/WhatsApp%20Image%202021-09-08%20at%2012.31.39%20AM.jpeg"
+          tappable
+          (click)="openPreview(img)"
+        />
+        <ion-card class="margin">
+          <ion-card-content> 
+            <div>
+              <strong>
+                Ganador al mejor equipo
+              </strong> 
+              <br>
+              ¿Cómo vives los valores femsa?
+            </div>
+         </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div>
+        <img
+          src="https://storage.googleapis.com/poc-sitio-web.appspot.com/OXXO/WhatsApp%20Image%202021-09-08%20at%2012.31.39%20AM.jpeg"
+          tappable
+          (click)="openPreview(img)"
+        />
+        <ion-card class="margin">
+          <ion-card-content> 
+            <div>
+              <strong>Ganador al mejor equipo</strong> 
+              <br>
+              ¿Cómo vives los valores femsa?
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- <div class="contenedor">
     <div>
       <img src="https://storage.googleapis.com/poc-sitio-web.appspot.com/OXXO/WhatsApp%20Image%202021-09-08%20at%2012.31.38%20AM.jpeg" alt="">
     </div>
@@ -15,7 +78,5 @@
     <div>
       <img src="https://storage.googleapis.com/poc-sitio-web.appspot.com/OXXO/WhatsApp%20Image%202021-09-08%20at%2012.31.39%20AM.jpeg" alt="">
     </div>
-  </div>
-
-  <img src="converted_image" alt="">
+  </div> -->
 </ion-content>

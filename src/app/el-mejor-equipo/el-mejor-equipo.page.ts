@@ -9,7 +9,21 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./el-mejor-equipo.page.scss'],
 })
 export class ElMejorEquipoPage implements OnInit {
-
+  sliderOpts = {
+    grabCursor: true,
+    zoom: false,
+    slidesPerView: 1.5,
+    spaceBetween: 80,
+    centeredSlides: true,
+    pagination: true,
+    paginationType: 'bullets',
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
+  };
   elMejorEquipoData;
   text;
   base64Data;

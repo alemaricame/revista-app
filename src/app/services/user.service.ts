@@ -49,6 +49,10 @@ export class UserService {
     return this.http.post(environment.apiURL+'edit-users', data);
   }
 
+  editPassword(data){
+    return this.http.post(environment.apiURL+'edit-password', data);
+  }
+
   /**
    * Información que cura
    */
@@ -62,5 +66,11 @@ export class UserService {
 
   convenios(){
     return this.http.get(environment.apiURL+'/salud/convenios');
+  }
+
+
+
+  picture(data){
+    return this.http.post(environment.apiURL+'edit-profileimage', data);
   }
 }

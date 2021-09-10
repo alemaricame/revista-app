@@ -34,7 +34,11 @@ export class CumpleanosMesPage implements OnInit {
       console.log(response)
       response['data'].forEach(element => {
         element.date =  moment(element.date).format("MM/DD/YYYY");
-        if(moment(element.date).month()+1 === (this.month.getMonth()+1)){
+        console.log('element', element.date)
+        console.log(this.month.getMonth()+1)
+        console.log(moment(element.date).date())
+
+        if(moment(element.date).date() === (this.month.getMonth()+1)){
           this.users.push(element);
         }
       });

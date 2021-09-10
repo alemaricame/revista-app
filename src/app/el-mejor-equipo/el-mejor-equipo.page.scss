@@ -2,17 +2,31 @@
     --background: url('../../assets/imgs/Mobile\ -\ 8.png') 0 0/100% 100% no-repeat;
 }
 
-.contenedor{
-    position: relative;
-    display: inline-block;
-    text-align: center;
+
+ion-slides{
+    margin-top: 40%;
 }
 
-.texto-encima{
-    position: absolute;
-    top: 50%;
-    left: 64px;
-    width: 50%;
+.preview-slides {
+  margin-top: 40%;
+  background: transparent;
+ 
+  img {
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+}
+
+.margin{
+    margin-top: 50%;
+}
+ion-card{
+    background-color: transparent;
+}
+.transparent-modal {
+    .modal-wrapper {
+        --background: rgba(44, 39, 45, 0.2);
+    }
 }
 
 ion-fab-button{

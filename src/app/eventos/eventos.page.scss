@@ -1,5 +1,12 @@
+*{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
 .contenido{
     --background: url('../../assets/imgs/Mobile\ -\ 13.png') 0 0/100% 100% no-repeat;
+}
+
+.margin{
+    margin-bottom: 25px;
 }
 ion-list{
     background: transparent;
@@ -12,7 +19,7 @@ ion-card{
     margin:10px auto;
     width: 80vw;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
+    background-color: #FCCD20;
     color: rgb(0, 0, 0);
 }
 
